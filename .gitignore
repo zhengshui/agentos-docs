@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+
+# Independent child repositories managed by their own Git history.
+/agent-store-website/
+/agentos-api/
+/agentos-auth/
+/agentos-dcc-app/
+/agentos-desktop/
+/agentos-dev-docs/
+/agentos-homepage/
+/agentos-kernel/
+/agentos-sdk-dart/
+/agentos-sdk-ts/
+/agentos-server/
+/agentos-server-oauth2/
+/agentos-web/
+/agentos_chat/
+/agentos_mobile/
+/bret-browser/
+/cactus_openai/
+/chatkit-agentos-ts/
+/chatkit-dart/
+/code-switch/
+/liteagent_sdk_dart/
+/opentool/
+/opentool-daemon-client/
+/opentool-dart/
+/opentool-hub/
+/opentool-typescript/
+/opentool-util-daemon/
+/wynn-wiki/
+/yoo-time/
