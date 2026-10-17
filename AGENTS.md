@@ -2,7 +2,7 @@
 
 ## Workspace Shape
 
-This directory is an aggregation workspace for multiple AgentOS-related projects. It is not a single monorepo and the workspace root is not a Git repository. Most child directories are independent projects with their own dependency files, Git history, build commands, tests, and release cadence.
+This directory is the `agentos-docs` Git repository. It coordinates multiple AgentOS-related projects and is not a monorepo. Child product directories are independent repositories, listed in `.gitignore`, and are absent unless someone clones them into this workspace. Each of those repositories keeps its own dependency files, Git history, build commands, tests, and release cadence.
 
 Use the root `README.md` as the product and directory map. When changing behavior, first identify the owning child project and work from that directory.
 
@@ -134,3 +134,15 @@ Pick the narrowest verification that proves the changed behavior:
 - Docs-only changes: run the docs build when touching VitePress config or generated navigation; otherwise proofread the affected pages.
 
 If dependencies are missing, do not install globally. Use the child project's package manager and document any verification that could not be run.
+
+## Cursor Cloud specific instructions
+
+This checkout only contains the documentation hub, agent skills, and the root README. Do not expect `agentos-web`, `agentos-server`, `agentos-desktop`, or the other product trees named above to be present.
+
+There is no package manifest, lockfile, or build step. Preview the hub with:
+
+```bash
+python3 -m http.server 8000 --bind 0.0.0.0
+```
+
+Open `http://127.0.0.1:8000/docs/README.md`, then `docs/context/project-map.md` and `docs/context/capability-matrix.md`, before searching for an owning project. A saved Cloud Agent environment serves this same preview on port 8000 at boot.
